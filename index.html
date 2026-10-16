@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ameer Sohail Aurnab — Software &amp; Android Developer</title>
+<meta name="description" content="Ameer Sohail Aurnab — Information &amp; Communication Engineering student building Android, web, and Python software. EEG seizure-detection researcher.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= BACKGROUND LAYERS ================= -->
+<div class="bg-layer bg-aurora"></div>
+<div class="bg-layer bg-grid"></div>
+<div class="bg-layer bg-noise"></div>
+
+<!-- ================= LOADING SCREEN ================= -->
+<div id="loader">
+  <p class="loader-mark">Initializing</p>
+  <h1 class="loader-name">Ameer Sohail Aurnab</h1>
+  <div class="loader-bar"><span></span></div>
+</div>
+
+<!-- ================= CUSTOM CURSOR ================= -->
+<div class="cursor-glow" id="cursorGlow"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+<!-- ================= SCROLL PROGRESS ================= -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ================= NAV ================= -->
+<header class="nav" id="nav">
+  <a href="#hero" class="nav-logo">AS<span class="dot"></span></a>
+  <nav class="nav-links" id="navLinks">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#research">Research</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a href="#contact" class="nav-cta magnetic">Let's talk</a>
+  <button class="nav-burger" id="navBurger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main>
+
+<!-- ================= HERO ================= -->
+<section id="hero" class="hero">
+  <canvas id="signalCanvas"></canvas>
+  <div class="hero-glow" id="heroGlow"></div>
+
+  <div class="hero-chips" id="heroChips">
+    <span class="hero-chip" style="top:18%; left:8%; animation-delay:0s;">Kotlin</span>
+    <span class="hero-chip" style="top:70%; left:6%; animation-delay:1.2s;">PyTorch</span>
+    <span class="hero-chip" style="top:24%; right:6%; animation-delay:.6s;">React</span>
+    <span class="hero-chip" style="top:68%; right:8%; animation-delay:1.8s;">BiLSTM</span>
+    <span class="hero-chip" style="top:45%; left:2%; animation-delay:2.4s;">Android</span>
+    <span class="hero-chip" style="top:42%; right:2%; animation-delay:.9s;">EEG</span>
+  </div>
+
+  <div class="hero-content">
+    <p class="hero-pill reveal-up"><span class="dot"></span> Dhaka, Bangladesh — available for internships</p>
+    <h1 class="hero-title">
+      <span class="reveal-up" style="--d:0.05s">Ameer Sohail</span>
+      <span class="reveal-up gradient-text" style="--d:0.15s">Aurnab</span>
+    </h1>
+    <p class="hero-role reveal-up" style="--d:0.25s">
+      <span id="typewriter"></span><span class="cursor-blink">|</span>
+    </p>
+    <p class="hero-desc reveal-up" style="--d:0.35s">
+      Information &amp; Communication Engineering student who builds Android apps, web
+      interfaces, and Python tools — and researches deep learning models for EEG seizure detection.
+    </p>
+    <div class="hero-actions reveal-up" style="--d:0.45s">
+      <a href="#projects" class="btn btn-primary magnetic">View my work</a>
+      <a href="resume.pdf" class="btn btn-ghost magnetic" download>Download resume</a>
+    </div>
+  </div>
+
+  <a href="#about" class="scroll-cue" aria-label="Scroll down">
+    <span></span>
+  </a>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="section">
+  <div class="section-head">
+    <p class="eyebrow reveal">About</p>
+    <h2 class="section-title reveal">A student who'd rather ship something small than talk about something big.</h2>
+  </div>
+
+  <div class="bento">
+    <div class="glass-card about-bio reveal">
+      <p>
+        I'm an ICE (Information &amp; Communication Engineering) undergraduate at Bangladesh
+        University of Professionals, and most of what I know I picked up by building things —
+        an Android app here, a scraper there, a deep learning model when the problem called for one.
+      </p>
+      <p>
+        My recent focus split two ways: an industrial attachment where I built a production-style
+        Python web scraper, and a thesis where I trained a Multi-Scale Attention BiLSTM to detect
+        seizures from EEG signals. Both taught me the same lesson — <strong>clean, working code
+        beats clever, fragile code.</strong>
+      </p>
+      <p>
+        Outside of coursework, I'm usually deep in Android/Kotlin, front-end web, or automating
+        something with Python.
+      </p>
+    </div>
+
+    <div class="glass-card about-portrait reveal beam-card">
+      <img src="images/ameer.png" alt="Portrait of Ameer Sohail Aurnab">
+      <div class="about-portrait-tag">Dhaka, BD · BUP, ICE</div>
+    </div>
+
+    <div class="glass-card stat-card reveal"><span class="stat-num" data-count="6">0</span><span class="stat-label">Projects shipped</span></div>
+    <div class="glass-card stat-card reveal"><span class="stat-num" data-count="12">0</span><span class="stat-label">Technologies used</span></div>
+    <div class="glass-card stat-card reveal"><span class="stat-num" data-count="8">0</span><span class="stat-label">Weeks of industry experience</span></div>
+    <div class="glass-card stat-card reveal"><span class="stat-num" data-count="1">0</span><span class="stat-label">Undergraduate thesis</span></div>
+
+    <div class="glass-card about-quote reveal">
+      <span class="mark">“</span>
+      <span>Build the thing, then talk about it — not the other way around.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section id="skills" class="section">
+  <div class="section-head">
+    <p class="eyebrow reveal">Skills</p>
+    <h2 class="section-title reveal">Tools I reach for.</h2>
+  </div>
+
+  <div class="marquee-wrap reveal">
+    <div class="marquee-track" id="marqueeTop"></div>
+  </div>
+  <div class="marquee-wrap reveal">
+    <div class="marquee-track reverse" id="marqueeBottom"></div>
+  </div>
+
+  <div class="skill-filters reveal">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="languages">Languages</button>
+    <button class="filter-btn" data-filter="mobile-web">Mobile &amp; Web</button>
+    <button class="filter-btn" data-filter="data">Data &amp; Backend</button>
+    <button class="filter-btn" data-filter="tools">Tools</button>
+  </div>
+
+  <div class="skills-grid" id="skillsGrid">
+    <!-- injected by script.js -->
+  </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section id="projects" class="section">
+  <div class="section-head">
+    <p class="eyebrow reveal">Projects</p>
+    <h2 class="section-title reveal">Things I've built.</h2>
+  </div>
+
+  <div class="projects-grid" id="projectsGrid">
+    <!-- injected by script.js -->
+  </div>
+</section>
+
+<!-- ================= EDUCATION ================= -->
+<section id="education" class="section">
+  <div class="section-head">
+    <p class="eyebrow reveal">Education</p>
+    <h2 class="section-title reveal">Where it started.</h2>
+  </div>
+
+  <div class="timeline" id="eduTimeline">
+    <div class="timeline-item reveal">
+      <div class="timeline-dot"></div>
+      <div class="glass-card timeline-card">
+        <span class="timeline-period">2022 — Present</span>
+        <h3>B.Sc. in Information &amp; Communication Engineering</h3>
+        <p class="timeline-org">Bangladesh University of Professionals (BUP)</p>
+        <p>Coursework spanning software engineering, signal processing, and machine learning.
+           Final-year thesis on EEG-based seizure detection using deep learning.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EXPERIENCE ================= -->
+<section id="experience" class="section">
+  <div class="section-head">
+    <p class="eyebrow reveal">Experience</p>
+    <h2 class="section-title reveal">Where I've worked.</h2>
+  </div>
+
+  <div class="timeline" id="expTimeline">
+    <div class="timeline-item reveal">
+      <div class="timeline-dot"></div>
+      <div class="glass-card timeline-card">
+        <span class="timeline-period">2026 · 8 weeks</span>
+        <h3>Industrial Attachment — Software Development</h3>
+        <p class="timeline-org">Techknowgram Limited</p>
+        <p>Built a Python-based product scraper for Daraz using <code>requests</code>,
+           <code>pandas</code>, and <code>concurrent.futures</code> for concurrent data collection.
+           Presented the project and its architecture to an academic and industry panel.</p>
+        <div class="badge-row">
+          <span class="badge">Python</span>
+          <span class="badge">Web Scraping</span>
+          <span class="badge">Concurrency</span>
+          <span class="badge">Data Pipelines</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RESEARCH ================= -->
+<section id="research" class="section">
+  <div class="section-head">
+    <p class="eyebrow reveal">Research</p>
+    <h2 class="section-title reveal">Undergraduate thesis.</h2>
+  </div>
+
+  <div class="research-card glass-card reveal beam-card">
+    <div class="research-text">
+      <span class="badge badge-accent">Deep Learning · Biomedical Signals</span>
+      <h3>Multi-Scale Attention BiLSTM for Patient-Independent Seizure Detection</h3>
+      <p>
+        A deep learning pipeline that detects epileptic seizures directly from EEG signals,
+        designed to generalize across patients rather than memorize one. The model combines
+        multi-scale feature extraction with an attention mechanism over a bidirectional LSTM,
+        trained and evaluated on the CHB-MIT Scalp EEG Database under
+        Leave-One-Subject-Out Cross-Validation (LOSOCV) — a stricter test that mimics
+        real-world deployment on unseen patients.
+      </p>
+      <p class="research-meta">With Swarup Mazumder, Abdullah Al Rohan, and Ameer Sohail Aurnab ·
+        Supervised by Nazneen Akhter</p>
+    </div>
+    <div class="research-diagram">
+      <svg viewBox="0 0 320 220" width="100%" height="100%">
+        <defs>
+          <linearGradient id="pipeGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#4f8dff"/>
+            <stop offset="1" stop-color="#22d3ee"/>
+          </linearGradient>
+        </defs>
+        <g fill="none" stroke="url(#pipeGrad)" stroke-width="1.5" opacity="0.9">
+          <path id="eegWave" d="M10 40 Q 25 10, 40 40 T 70 40 T 100 40 T 130 40" stroke-width="2"/>
+        </g>
+        <g font-family="JetBrains Mono, monospace" font-size="9" fill="#9aa3c0">
+          <rect x="0" y="60" width="90" height="30" rx="6" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.14)"/>
+          <text x="10" y="79">EEG Input</text>
+
+          <rect x="0" y="110" width="90" height="30" rx="6" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.14)"/>
+          <text x="10" y="129">Preprocessing</text>
+
+          <rect x="115" y="85" width="110" height="30" rx="6" fill="rgba(79,141,255,0.14)" stroke="#4f8dff"/>
+          <text x="123" y="104" fill="#dce6ff">Multi-Scale CNN</text>
+
+          <rect x="115" y="135" width="110" height="30" rx="6" fill="rgba(139,107,255,0.14)" stroke="#8b6bff"/>
+          <text x="140" y="154" fill="#e7dcff">BiLSTM</text>
+
+          <rect x="240" y="110" width="70" height="30" rx="6" fill="rgba(34,211,238,0.14)" stroke="#22d3ee"/>
+          <text x="252" y="129" fill="#d6faff">Attention</text>
+
+          <rect x="115" y="180" width="195" height="30" rx="6" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.14)"/>
+          <text x="175" y="199">Seizure / Non-seizure</text>
+        </g>
+        <g stroke="rgba(255,255,255,0.28)" stroke-width="1">
+          <path d="M45 90 V100 H60 V110" fill="none"/>
+          <path d="M45 140 H160 V155" fill="none"/>
+          <path d="M225 100 H275 V110" fill="none"/>
+          <path d="M170 165 V180" fill="none"/>
+          <path d="M275 140 V165 H215 V180" fill="none"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CERTIFICATES ================= -->
+<section id="certificates" class="section">
+  <div class="section-head">
+    <p class="eyebrow reveal">Certificates</p>
+    <h2 class="section-title reveal">Courses &amp; credentials.</h2>
+  </div>
+
+  <div class="cert-grid" id="certGrid">
+    <!-- EDIT ME: replace with your real certificates in script.js (certData array) -->
+  </div>
+</section>
+
+<!-- ================= RESUME ================= -->
+<section id="resume" class="section resume-section">
+  <div class="glass-card resume-card reveal beam-card">
+    <div>
+      <p class="eyebrow">Resume</p>
+      <h2 class="section-title" style="margin-bottom:0.5rem;">Want the one-page version?</h2>
+      <p class="resume-sub">A condensed PDF with education, experience, and skills — ready to attach to an application.</p>
+    </div>
+    <a href="resume.pdf" class="btn btn-primary magnetic" download>Download PDF</a>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="section">
+  <div class="section-head">
+    <p class="eyebrow reveal">Contact</p>
+    <h2 class="section-title reveal">Let's build something.</h2>
+  </div>
+
+  <div class="contact-grid">
+    <form class="glass-card contact-form reveal" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <div class="form-row">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required placeholder="Your name">
+      </div>
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required placeholder="you@example.com">
+      </div>
+      <div class="form-row">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required placeholder="What are you building?"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary magnetic" style="width:100%;">Send message</button>
+      <p class="form-note">This form needs a free <a href="https://formspree.io/f/xjybvjwb" target="_blank" rel="noopener">Formspree</a> endpoint — swap YOUR_FORM_ID above once you sign up.</p>
+    </form>
+
+    <div class="contact-side reveal">
+      <a class="glass-card contact-link magnetic" href="mailto:aurnabar209@gmail.com">
+        <span class="contact-link-label">Email</span>
+        <span>aurnabar209@gmail.com</span>
+      </a>
+      <a class="glass-card contact-link magnetic" href="https://github.com/aurnabar-209" target="_blank" rel="noopener">
+        <span class="contact-link-label">GitHub</span>
+        <span>github.com/aurnabar-209</span>
+      </a>
+      <a class="glass-card contact-link magnetic" href="https://www.linkedin.com/in/ameer-sohail-aurnab-59311425b/" target="_blank" rel="noopener">
+        <span class="contact-link-label">LinkedIn</span>
+        <span>in/ameer-sohail-aurnab</span>
+      </a>
+      <div class="glass-card map-card">
+        <iframe title="Dhaka, Bangladesh map" src="https://maps.google.com/maps?q=Dhaka,Bangladesh&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <a href="#hero" class="nav-logo">AS<span class="dot"></span></a>
+  <p>&copy; <span id="year"></span> Ameer Sohail Aurnab. Built from scratch with HTML, CSS &amp; JavaScript.</p>
+  <div class="footer-socials">
+    <a href="mailto:aurnabar209@gmail.com" aria-label="Email">Email</a>
+    <a href="https://github.com/aurnabar-209" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
+    <a href="https://www.linkedin.com/in/ameer-sohail-aurnab-59311425b/" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">&uarr;</button>
+
+<script src="script.js"></script>
+</body>
+</html>
